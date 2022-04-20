@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 
@@ -8,9 +9,11 @@ const MovieCard =({movie})=>{
         <div className="movie">
       <h2 className="title">{movie.title}</h2>
 <div className="MyCard">
+    <Link to={`/movie/${movie.id}`}>
 <img
 width={200}
- src={movie.posterUrl} alt="" />
+ src={movie.posterUrl} />
+    </Link>
 </div>
 <p>({movie.year})</p>
 <h4>{"⭐".repeat(movie.rating)} </h4>
@@ -20,3 +23,7 @@ width={200}
     );
 };
 export default MovieCard
+
+
+
+

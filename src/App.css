@@ -53,6 +53,28 @@ position: absolute;
 .App-link {
   color: #61dafb;
 }
+.movieDetails{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  
+  }
+  
+  .movieTitle{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  }
+  
+  .btnn{
+    margin-top: 20px;
+     border-radius: 2em 4em;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     background-color: cornflowerblue;
+     color: black;
+     border: 1px solid black;
+  
+  
+  
+  }
 
 @keyframes App-logo-spin {
   from {

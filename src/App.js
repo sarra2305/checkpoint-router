@@ -7,6 +7,9 @@ import Search from "./component/Search/Search";
 import MovieData from "./component/MovieData/Data";
 import MovieList from "./component/MovieList/MovieList";
 import AddMovie from "./component/AddMovie/AddMovie";
+import MovieDetails from "./component/MovieDetails/MovieDetails";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 
 
 function App(){
@@ -30,12 +33,25 @@ function App(){
       <Search 
       handleTitle={handleTitle}
       handleRate={handleRate} />
-      <p className="App-intro">Top Movies</p>
+      <p className="App-intro">Top Anime Movies</p>
       <AddMovie handleData={handleData}/>
-      <MovieList Data={Data}
-      title={title}
-      rate={rate}/>
 
+      <Routes>
+        <Route 
+        path="/" 
+        element={
+        <MovieList 
+        Data={Data} 
+        title={title} 
+        rate={rate} />}/>
+          <Route
+          path="/movie/:id" 
+          element={
+             <MovieDetails/>
+        }
+          />
+        
+      </Routes>
     </div>
     
   )
